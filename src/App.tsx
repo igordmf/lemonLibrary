@@ -38,7 +38,7 @@ function App() {
         </main>
       </div>
       
-      <div style={BgStyles}/>
+      <div title='bg-image' style={BgStyles}/>
     </>
   );
 }
