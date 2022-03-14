@@ -1,46 +1,62 @@
-# Getting Started with Create React App
+# Lemon - Teste Frontend - Button
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 📋 Requisitos
 
-## Available Scripts
+### O projeto consiste em criar um botão como componente de uma biblioteca.
 
-In the project directory, you can run:
+### O botão possui diferenças visuais por estado e pela configuração de suas props.
 
-### `npm start`
+### **props:**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+✔️ `color` _(string) -_ altera o esquema de cores do botão. A cor aplicada em um botão depende do esquema de cores, dos estados e de outras props aplicadas.
+**Valores possíveis:** `primary`, `secondary`
+**Default:** `primary`
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+✔️ `icon` _(string?) -_ recebe o nome do ícone que deve ser apresentado no botão, em formato SVG. Não existe botão que tenha apenas um ícone como conteúdo. **Não é obrigatória.**
+**Valores possíveis:** `arrow-right`, `check`, `refresh`
 
-### `npm test`
+✔️ `onClick` _(function?)_ - função a ser executada no evento de _click_. **Não é obrigatória.**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+✔️ `disabled` _(boolean)_: aciona estado `:disabled` quando `true`, no qual ações de _click_ devem estar desabilitadas.
+**Default:** `false`
 
-### `npm run build`
+✔️ `children` _(`React.ReactNode`?)_: **conteúdo do botão. **Não é obrigatória.\*\*
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🛠 Tecnologias
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png" width="20" height="16" /> ReactJS
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<img src="https://www.typescriptlang.org/favicon-32x32.png" width="20" height="16" /> TypeScript
 
-### `npm run eject`
+<img src="https://raw.githubusercontent.com/styled-components/brand/master/styled-components.png" width="16" height="16" /> Styled-components
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+<img src="https://testing-library.com/img/octopus-64x64.png" width="20" height="16" /> React Testing Library
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## ▶️ Inicializando o projeto
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- ### **Pré-requisitos**
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+  - **Node.js**
+  - Gerenciador de pacotes **npm**
 
-## Learn More
+```sh
+  # Abra pasta do projeto
+  $ cd lemonLibrary
+  # Instale as dependencias
+  $ npm install
+  # Rode a aplicação
+  $ npm start
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Abra o navegador
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+[http://localhost:3000](http://localhost:3000) para ver no browser.
+
+## ▶️ Rodando os tests
+
+```sh
+  # Abra pasta do projeto
+  $ cd lemonLibrary
+  # Rode os testes
+  $ npm test
+```
