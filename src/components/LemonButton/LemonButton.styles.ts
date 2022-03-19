@@ -9,6 +9,7 @@ const Primary = {
   PRESSED:colors.PRIMARY_PRESSED,
   DISABLED:colors.PRIMARY_DISABLED,
   TEXT:colors.WHITE,
+  TEXT_DISABLED:colors.WHITE,
 }
 
 const Secondary = {
@@ -17,6 +18,7 @@ const Secondary = {
   PRESSED:colors.SECONDARY_PRESSED,
   DISABLED:colors.SECONDARY_DISABLED,
   TEXT:colors.BLACK,
+  TEXT_DISABLED:colors.WHITE,
 }
 
 const getColors = (color: ColorType) => {
@@ -44,11 +46,12 @@ export const Container = styled.button<ContainerProps>`
   display: flex;
   font: 16px 'Inter', sans-serif;
   font-weight: 400;
+  gap: 1rem;
   height: 56px;
   justify-content: ${({ icon }) => icon ? 'space-between' : 'center'};
   line-height: 24px;
-  padding: 19px 1rem 20px;
   min-width: 311px;
+  padding: 19px 1rem 20px;
   width: 100%;
 
   &:hover {
@@ -61,5 +64,6 @@ export const Container = styled.button<ContainerProps>`
 
   &:disabled {
     background-color: ${({ color }) => getColors(color).DISABLED};
+    color: ${({ color }) => getColors(color).TEXT_DISABLED};
   }
 `
