@@ -35,7 +35,7 @@ export const LemonButton = ({
   return(
     <Container color={color} disabled={disabled} icon={icon} onClick={onClick} >
       {children}
-      {icon && renderIcon(icon)}
+      {children && icon && renderIcon(icon)}
     </Container>
   )
 }
